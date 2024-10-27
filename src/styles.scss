@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    font-size: 16px;
+}
+
+.light {
+    @import "../public/assets/themes/myThemes/aura/aura-light/noir/theme.scss";
+    // background-color: theme('backgroundColor.white', currentColor)
+    background: $horizontalMenuBg;
+    .border {
+        // border: 1px solid #e2e8f0;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #e2e8f0;
+    }
+}
+
+.dark {
+    @import "../public/assets/themes/myThemes/aura/aura-dark/noir/theme.scss";
+    background: $horizontalMenuBg;
+    // background-color: theme('backgroundColor.black', currentColor)
+    .border {
+        border: 1px solid #fafafa29;
+    }
+}
+@import "primeicons/primeicons.css";
+@import "primeng/resources/primeng.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.p-splitbutton-menubutton {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
